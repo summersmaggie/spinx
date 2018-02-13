@@ -6,6 +6,9 @@ class Sphinx
   end
 
   def quiz
+    if @riddle1 == 'man'
+      "This is correct."
+    end
   end
 
 end
