@@ -1,17 +1,9 @@
 <h3>Answer the Sphinx's riddles!</h3>
 
-<form action="/" method="get">
+<form action="/levelone" method="post">
   <div class="form-group">
-    <label for="question"><%= @new_question %></label>
-    <input id="question" name="question" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="question"><%= @new_question2 %></label>
-    <input id="question" name="question" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="question"><%= @new_question3 %></label>
-    <input id="question" name="question" class="form-control" type="text">
+    <label for="answer"><%= @new_question %></label>
+    <input id="question" name="answer" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Go!</button>
 </form>

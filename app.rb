@@ -5,18 +5,27 @@ require('./lib/sphinx')
 require('pry')
 
 get('/') do
-  new_sphinx = Sphinx.new(@randomizer)
+  new_sphinx = Sphinx.new()
   @new_question = new_sphinx.quiz
-  @new_question2 = new_sphinx.quiz
-  @new_question3 = new_sphinx.quiz
   erb(:input)
     # binding.pry
 end
 
-# post('/') do
-#   @randomizer = params.fetch("question")
-#
-#   erb(:input)
-# end
+post('/levelone') do
+  new_sphinx = Sphinx.new()
+  @new_question2 = new_sphinx.quiz
+  erb(:levelone)
+end
+
+post('/leveltwo') do
+  new_sphinx = Sphinx.new()
+  @new_question3 = new_sphinx.quiz
+  erb(:leveltwo)
+end
+
+post('/output') do
+  @user_answer = params.fetch("answer")
+  erb(:output)
+end
 
 # post('/success') do
