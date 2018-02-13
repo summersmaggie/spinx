@@ -14,6 +14,5 @@ post('/output') do
   @riddle3 = params.fetch("riddle3")
   new_sphinx = Sphinx.new(@riddle1, @riddle2, @riddle3)
 
-  @output = new_sphinx.quiz
-  binding.pry
+  @result = new_sphinx.quiz
 end
