@@ -1,17 +1,20 @@
 <h1>Answer the Sphinx's riddles!</h1>
 
-<form action="/output" method="post">
+<form action="/" method="get">
   <div class="form-group">
-    <label for="riddle1">What is the creature that walks on four legs in the morning, two legs at noon, and three in the evening?</label>
-    <input id="first" name="riddle1" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="riddle2">What gets wetter and wetter the more it dries?</label>
-    <input id="second" name="riddle2" class="form-control" type="text">
-  </div>
-  <div class="form-group">
-    <label for="riddle3">What is so fragile that when you say its name you break it?</label>
-    <input id="third" name="riddle3" class="form-control" type="text">
+    <label for="question"><%= @new_question %></label>
+    <input id="question" name="question" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Go!</button>
 </form>
+
+
+
+<!-- <div class="form-group">
+  <label for="riddle2">What gets wetter and wetter the more it dries?</label>
+  <input id="second" name="riddle2" class="form-control" type="text">
+</div>
+<div class="form-group">
+  <label for="riddle3">What is so fragile that when you say its name you break it?</label>
+  <input id="third" name="riddle3" class="form-control" type="text">
+</div> -->
