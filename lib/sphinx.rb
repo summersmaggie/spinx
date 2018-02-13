@@ -8,6 +8,8 @@ class Sphinx
   def quiz
     if @riddle1 == 'man' && @riddle2 == 'towel' && @riddle3 == 'silence'
       "This is correct."
+    elsif @riddle1 != 'man' && @riddle2 != 'towel' && @riddle3 != 'silence'
+      "You are wrong, try again."
     end
   end
 
