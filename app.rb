@@ -15,4 +15,7 @@ post('/output') do
   new_sphinx = Sphinx.new(@riddle1, @riddle2, @riddle3)
 
   @result = new_sphinx.quiz
+  erb(:output)
 end
+
+post('/success') do
