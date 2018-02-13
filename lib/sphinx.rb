@@ -7,9 +7,13 @@ class Sphinx
 
   def quiz
     if @riddle1 == 'man' && @riddle2 == 'towel' && @riddle3 == 'silence'
-      "This is correct."
+      "You are correct. You may pass."
+    elsif @riddle1 != 'man' && @riddle2 == 'towel' && @riddle3 == 'silence' || @riddle1 == 'man' && @riddle2 != 'towel' && @riddle3 == 'silence' || @riddle1 == 'man' && @riddle2 == 'towel' && @riddle3 != 'silence'
+      "You have two answers correct. Try again."
+    elsif @riddle1 != 'man' && @riddle2 != 'towel' && @riddle3 == 'silence' || @riddle1 == 'man' && @riddle2 != 'towel' && @riddle3 != 'silence' || @riddle1 != 'man' && @riddle2 == 'towel' && @riddle3 != 'silence'
+      "You have one answer correct. Try again."
     elsif @riddle1 != 'man' && @riddle2 != 'towel' && @riddle3 != 'silence'
-      "You are wrong, try again."
+      "You have no answers correct. Try again."
     end
   end
 
