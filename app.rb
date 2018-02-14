@@ -18,8 +18,14 @@ post('/leveltwo') do
   new_sphinx = Sphinx.new()
   @new_question2 = new_sphinx.quiz
   @user_answer1 = params.fetch("answer1")
-  erb(:leveltwo)
+    erb(:leveltwo)
 
+  # if @user_answer1.include?(@riddle_answers)
+  #   binding.pry
+  #   erb(:leveltwo)
+  # elsif
+  #   erb(:input)
+  # end
 end
 
 post('/levelthree') do
